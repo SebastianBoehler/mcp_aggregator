@@ -31,7 +31,8 @@ async function loadPlugins(): Promise<LoadedSpec[]> {
       const subApp = new Hono();
       plugin.register(subApp);
       app.route(`/mcp/${plugin.name}`, subApp);
-      specs.push({ name: plugin.name, spec: plugin.openapi });
+      const spec = typeof (plugin.openapi as any)?.then === 'function' ? await plugin.openapi : plugin.openapi;
+      specs.push({ name: plugin.name, spec });
       console.log(`Loaded MCP plugin: ${plugin.name}`);
     }
   } catch (err: any) {

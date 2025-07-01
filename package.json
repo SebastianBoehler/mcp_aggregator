@@ -1,0 +1,19 @@
+{
+  "name": "mcp-aggregator",
+  "version": "0.1.0",
+  "description": "Aggregates multiple MCP servers and exposes them from a single host instance.",
+  "license": "MIT",
+  "scripts": {
+    "dev": "bun run src/index.ts",
+    "start": "bun run src/index.ts",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.13.2",
+    "hono": "^4.0.0"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "^1.2.17"
+  }
+}

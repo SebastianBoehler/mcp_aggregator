@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "domain": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "domain-check-mcp"
+      ],
+      "disabled": true
+    },
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp@latest"
+      ]
+    }
+  }
+}

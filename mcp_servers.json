@@ -13,7 +13,8 @@
       "args": [
         "-y",
         "@upstash/context7-mcp@latest"
-      ]
+      ],
+      "disabled": true
     }
   }
 }
